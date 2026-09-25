@@ -50,7 +50,7 @@ browser.webRequest.onBeforeRequest.addListener(
                 const modifiedHTML =  "<!DOCTYPE html>\n" + doc.documentElement.outerHTML;
                 filter.write(encoder.encode(modifiedHTML));
                 filter.close();
-                //console.log("Modified HTML data:", modifiedHTML);
+                // console.log("Modified HTML data:", modifiedHTML);
             } catch (error) {
                 console.warn("Data is not valid HTML:", error);
                 filter.write(encoder.encode(response));
@@ -69,6 +69,6 @@ browser.webRequest.onBeforeRequest.addListener(
         // Block the request
         return { cancel: true };
     },
-    { urls: ["https://spankbang.com/users/av-registration?*"]}, //Age verification modal (should never pop up, but block in case of site updates)
+    { urls: ["https://spankbang.com/users/av-registration?*"]}, // Age verification modal (should never pop up, but block in case of site updates)
     ["blocking"]
 );

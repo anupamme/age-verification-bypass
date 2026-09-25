@@ -151,7 +151,7 @@ browser.webRequest.onBeforeRequest.addListener(
     ["blocking"]
 );
 
-// Usually, self labels (when people chose to make their content 18+) can't be seen by people who are not logged in. This function spoofs the label source to make it look like it's from bluesky's automod, which allows people to see it even if they are not logged in, due to how I rewrite the resopnse from the getServices labeler earlier in this file..
+// Usually, self labels (when people chose to make their content 18+) can't be seen by people who are not logged in. This function spoofs the label source to make it look like it's from bluesky's automod, which allows people to see it even if they are not logged in, due to how I rewrite the response from the getServices labeler earlier in this file..
 function spoofBlueskyAutomod(post) {
     if (post?.labels) {
         post.labels.forEach(label => {

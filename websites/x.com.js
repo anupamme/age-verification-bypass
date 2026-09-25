@@ -167,7 +167,7 @@ browser.webRequest.onBeforeRequest.addListener(
 browser.webRequest.onBeforeRequest.addListener(
     async function (details) {
         console.log("Request intercepted:", details.url);
-        // Not actually a bypass, but a notification to tet people know they can use tor to bypass it because it's just a geographical ip block
+        // Not actually a bypass, but a notification to let people know they can use tor to bypass it because it's just a geographical ip block
 
         const hasPermission = await browser.permissions.contains({
             permissions: ["notifications"]
