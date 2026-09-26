@@ -43,7 +43,7 @@ browser.webRequest.onBeforeRequest.addListener(
     ["blocking"]
 );
 
-// This is also hacky, it spoofs the JS sdk to just call the onSession callback with a fake response. Websites should usually check again in their back-end, but some websites don't care and just redirect to the callback URL. This is also currently incompatible with redirect URLs since you get those from the API response, which is blocked by the first listener.
+// This is also hacky, it spoofs the JS SDK to just call the onSession callback with a fake response. Websites should usually check again in their back-end, but some websites don't care and just redirect to the callback URL. This is also currently incompatible with redirect URLs since you get those from the API response, which is blocked by the first listener.
 browser.webRequest.onBeforeRequest.addListener(
         function (details) {
                 console.log("Request intercepted:", details.url);
@@ -84,7 +84,7 @@ browser.webRequest.onBeforeRequest.addListener(
                         filter.close();
                 };
         },
-        { urls: ["https://cdn.veriff.me/sdk/js/1.5/veriff.min.js"] }, //JS SDK
+        { urls: ["https://cdn.veriff.me/sdk/js/1.5/veriff.min.js"] }, // JS SDK
         ["blocking"]
 );
 
@@ -119,6 +119,6 @@ window.veriffSDK = {
                         filter.close();
                 };
         },
-        { urls: ["https://cdn.veriff.me/incontext/js/v2.5.0/veriff.js"] }, //Incontext SDK
+        { urls: ["https://cdn.veriff.me/incontext/js/v2.5.0/veriff.js"] }, // Incontext SDK
         ["blocking"]
 );

@@ -9,7 +9,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 */
 
 console.log("xhamster script is running");
-// Add button clicks listeners to the notification buttons
+// Add button click listeners to the notification buttons
 if(browser.notifications){ // Check if the notifications API is available
     browser.notifications.onClicked.addListener(async (notificationId) => {
         if (notificationId === "xhamster-bypass-notification") {
@@ -26,7 +26,7 @@ if(browser.notifications){ // Check if the notifications API is available
 browser.webRequest.onBeforeRequest.addListener(
     async function (details) {
         console.log("Request intercepted:", details.url);
-        // Not actually a bypass, but a notification to tet people know they can use tor to bypass it because it's just a geographical ip block
+        // Not actually a bypass, but a notification to let people know they can use tor to bypass it because it's just a geographical ip block
 
         const hasPermission = await browser.permissions.contains({
             permissions: ["notifications"]

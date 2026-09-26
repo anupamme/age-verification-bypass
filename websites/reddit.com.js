@@ -20,8 +20,8 @@ browser.webRequest.onBeforeRequest.addListener(
             func: () => {
                 const nsfwSubredditPopup = "configured-xpromo-blocking_xpromo_nsfw_blocking_desktop"; //Subreddit popup
                 const nsfwSubredditPopup2 = "configured-xpromo-blocking_xpromo_nsfw_blocking"; //On mobile, the popup has a different id
-                const loginUpsell = "desktop-dynamic-upsell-dialog"; //Login popup
-                const promptContainerTagName = "xpromo-nsfw-blocking-container" //Standalone post popup
+                const loginUpsell = "desktop-dynamic-upsell-dialog"; // Login popup
+                const promptContainerTagName = "xpromo-nsfw-blocking-container" // Standalone post popup
 
                 // Check if the popup gets added to the page
                 const observer = new MutationObserver((mutations) => {
