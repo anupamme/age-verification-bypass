@@ -7,13 +7,9 @@
 - Make sure it is allowed to run on all websites (or at least on the website you are trying to use it on), and in private browsing mode if you use it, from the extension settings.
 - Try to access a page gated by age verification, you will be directly let through. You can try on [ageChecker's demo page](https://agechecker.net/demo)
 
-<a href="https://discord.gg/zUq5de7bTU">
-<img alt="Discord Invite Badge" width="200" src="https://img.shields.io/badge/Discord-Join%20to%20get%20help-blue?style=social&logo=discord">
-</a>
+<a href="https://discord.gg/zUq5de7bTU"><img alt="Discord Invite Badge" width="200" src="https://img.shields.io/badge/Discord-Join%20to%20get%20help-blue?style=social&logo=discord"></a>
 
-<a href="https://matrix.to/#/#age-verification-bypass:matrix.org">
-<img alt="Matrix invite" width="200" src="https://img.shields.io/badge/Matrix-Join%20to%20get%20help-black?style=social&logo=matrix&label=Matrix">
-</a>
+<a href="https://matrix.to/#/#age-verification-bypass:matrix.org"><img alt="Matrix invite" width="200" src="https://img.shields.io/badge/Matrix-Join%20to%20get%20help-black?style=social&logo=matrix&label=Matrix"></a>
 
 
 # Supported services
