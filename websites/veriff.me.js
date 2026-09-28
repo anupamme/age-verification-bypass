@@ -29,10 +29,14 @@ browser.webRequest.onBeforeRequest.addListener(
                 let jsonData = JSON.parse(response);
                 console.log("Original JSON data:", jsonData);
                 const callbackUrl = new URL(jsonData.vendorIntegration.callback);
-                if (callbackUrl.protocol === "https:" || callbackUrl.protocol === "http:") {
-                    browser.tabs.update(details.tabId, { url: callbackUrl.href });
+                // details.documentUrl is the URL of the page that made this request, as reported
+                // by the browser itself — unlike the callback, it can't be spoofed by the Veriff
+                // API response, so it's a trustworthy "expected origin" for the redirect target.
+                const initiatorUrl = details.documentUrl || details.originUrl;
+                if (!initiatorUrl || new URL(initiatorUrl).origin !== callbackUrl.origin) {
+                    console.error("Blocked Veriff callback: destination origin does not match the site that started verification:", jsonData.vendorIntegration.callback);
                 } else {
-                    console.error("Blocked unsafe callback URL:", jsonData.vendorIntegration.callback);
+                    browser.tabs.update(details.tabId, { url: callbackUrl.href });
                 }
             } catch (error) {
                 console.error("Error parsing JSON:", error);
