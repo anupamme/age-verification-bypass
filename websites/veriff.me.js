@@ -28,7 +28,12 @@ browser.webRequest.onBeforeRequest.addListener(
             try {
                 let jsonData = JSON.parse(response);
                 console.log("Original JSON data:", jsonData);
-                browser.tabs.update(details.tabId, { url: jsonData.vendorIntegration.callback });
+                const callbackUrl = new URL(jsonData.vendorIntegration.callback);
+                if (callbackUrl.protocol === "https:" || callbackUrl.protocol === "http:") {
+                    browser.tabs.update(details.tabId, { url: callbackUrl.href });
+                } else {
+                    console.error("Blocked unsafe callback URL:", jsonData.vendorIntegration.callback);
+                }
             } catch (error) {
                 console.error("Error parsing JSON:", error);
             } finally {
