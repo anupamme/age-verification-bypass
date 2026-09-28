@@ -21,9 +21,13 @@
 - **[Veriff](https://veriff.com)** (Supports only a few sites using it! Try, but don't expect it to work!)
 - [BETA, Not released yet] **[X.com / Twitter](https://x.com)** for viewing sensitive posts (Needs to be logged in to an account!)
 
-<img alt="Discord Invite Badge" width="200" src="https://img.shields.io/badge/Discord-Join%20to%20get%20help-blue?style=social&logo=discord&link=https%3A%2F%2Fdiscord.gg%2FRdUJe4wJnP">
+<a href="https://discord.gg/zUq5de7bTU">
+<img alt="Discord Invite Badge" width="200" src="https://img.shields.io/badge/Discord-Join%20to%20get%20help-blue?style=social&logo=discord">
+</a>
 
-<img alt="Matrix invite" width="200" src="https://img.shields.io/badge/Matrix-Join%20to%20get%20help-black?style=social&logo=matrix&label=Matrix&link=https%3A%2F%2Fmatrix.to%2F%23%2F%23age-verification-bypass%3Amatrix.org">
+<a href="https://matrix.to/#/#age-verification-bypass:matrix.org">
+<img alt="Matrix invite" width="200" src="https://img.shields.io/badge/Matrix-Join%20to%20get%20help-black?style=social&logo=matrix&label=Matrix">
+</a>
 
 > [!NOTE]
 > Have enough of ID age verification? Check out [this European Citizen's Initiative](https://furries.club/@helloyanis/117212986487046806) asking to stop killing the internet!
